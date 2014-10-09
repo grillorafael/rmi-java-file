@@ -1,0 +1,14 @@
+Roteiro RMI:
+1. Compilar todos os arquivos fontes
+
+2. Rodar rmic para a classe de implementacao da interface servidor/cliente
+   rmic CalculadoraImpl
+
+3. Iniciar o registro RMI
+   rmiregistry &
+
+4. Iniciar o servidor
+   java -Djava.security.policy=server.policy CalculadoraServer
+
+5. Rodar o cliente
+   java -Djava.security.policy=client.policy CalculadoraClient   
