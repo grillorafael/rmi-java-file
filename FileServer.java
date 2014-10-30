@@ -1,6 +1,4 @@
 import java.rmi.*;
-import java.rmi.server.*;
-import sun.applet.*;
 
 public class FileServer {
     public static void main (String[] args) {
