@@ -1,11 +1,13 @@
+
 import java.util.*;
 import java.rmi.*;
 
 public class FileClient {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        String fileName, fileContent;
+        String fileName, fileContent="";
         boolean end = false;
         int opcao;
 
@@ -28,7 +30,14 @@ public class FileClient {
                         System.out.print("Insert file name: ");
                         fileName = in.next();
                         System.out.print("Insert file content: ");
-                        fileContent = in.next();
+                        String sentence;
+                        while (true) {
+                            sentence = in.nextLine();
+                            if (sentence.equals("Fim")) {
+                                break;
+                            }
+                            fileContent.concat(sentence);
+                        }
                         System.out.println(fileService.write(fileName, fileContent));
                         break;
                     }
