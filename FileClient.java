@@ -37,6 +37,7 @@ public class FileClient {
                                 break;
                             }
                             fileContent+=sentence;
+
                         }
                         System.out.println(fileService.write(fileName, fileContent));
                         break;
