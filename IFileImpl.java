@@ -40,7 +40,7 @@ public class IFileImpl extends UnicastRemoteObject implements IFile {
             sleep(TIMEOUT);
             Scanner in = new Scanner(new File(this.outputFolder + fileName));
             while (in.hasNext()) {
-                output += in.nextLine();
+                output += in.nextLine() + "\n";
             }
             in.close();
             return output;

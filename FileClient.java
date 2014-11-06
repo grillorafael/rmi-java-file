@@ -36,7 +36,7 @@ public class FileClient {
                             if (sentence.equals("Fim")) {
                                 break;
                             }
-                            fileContent+=sentence;
+                            fileContent += sentence + "\n";
 
                         }
                         System.out.println(fileService.write(fileName, fileContent));
